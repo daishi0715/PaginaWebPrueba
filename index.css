@@ -1,0 +1,338 @@
+
+/* =================================
+   CONFIGURACION GENERAL
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --primary-color: #8B5E3C;
+    --secondary-color: #D9B991;
+    --dark-color: #29231F;
+    --light-color: #F8F5F0;
+    --white-color: #FFFFFF;
+    --text-color: #6F675F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+.header {
+    background-color: var(--white-color);
+    padding: 22px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--primary-color);
+}
+
+/* =================================
+   BOTONES
+================================= */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 14px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--dark-color);
+}
+
+.btn-small {
+    padding: 11px 20px;
+}
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    background-color: var(--light-color);
+    padding: 85px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.subtitle {
+    display: block;
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-text p {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* =================================
+   NOSOTROS
+================================= */
+
+.about {
+    text-align: center;
+}
+
+.about-content {
+    max-width: 750px;
+}
+
+.about h2,
+.section-heading h2,
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: var(--text-color);
+}
+
+/* =================================
+   MENU
+================================= */
+
+.menu {
+    background-color: var(--light-color);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: var(--text-color);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+}
+
+.menu-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 24px;
+}
+
+.menu-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.menu-info p {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.menu-info span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* =================================
+   CONTACTO
+================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: var(--text-color);
+    margin-bottom: 28px;
+}
+
+/* =================================
+   PIE DE PAGINA
+================================= */
+
+.footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* =================================
+   DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .about h2,
+    .section-heading h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar .btn {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+}
